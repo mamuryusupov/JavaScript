@@ -47,13 +47,25 @@
 // console.log(sum(5, 10));
 // console.log(sum(20, 30));
 
-function findDivCount(a, b, n) {
-    let resultOfDivs = 0;
-    for (let i = a; i <= b; i++) {
-        if (i % n === 0) {
-            resultOfDivs++;
-        }
+// function findDivCount(a, b, n) {
+//     let resultOfDivs = 0;
+//     for (let i = a; i <= b; i++) {
+//         if (i % n === 0) {
+//             resultOfDivs++;
+//         }
+//     }
+//     return resultOfDivs;
+// }
+// console.log(findDivCount(2, 12, 3));
+
+function getSum(number1, number2) {
+  let sumOfOddNums = 0;
+  for (let i = number1; i <= number2; i += 1) {
+    if (i % 2 === 0) {
+      sumOfOddNums += i;
     }
-    return resultOfDivs;
+  }
+  return sumOfOddNums;
 }
-console.log(findDivCount(2, 12, 3));
+
+console.log(getSum(2, 10));

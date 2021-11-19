@@ -84,8 +84,8 @@
 // console.log(getSum(10, 12, 14)); // ==> null;
 
 /////////////////////////////////
-//Restart
-//Перебор массива
+// Restart
+// Перебор массива
 // const numbers = [11, 22, 33, 55, 66];
 
 // for (let i = 0; i <= numbers.length - 1; i++) {
@@ -120,20 +120,27 @@
 
 //Homework
 
-function getSum(arr) {
-    // put your code here
-    let sumOfElems = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sumOfElems += arr[i];
-    }
-    if (!Array.isArray(arr)) {
-        return null;
-    }
-    return sumOfElems;
-}
+// function getSum(arr) {
+//     // put your code here
+//     let sumOfElems = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         sumOfElems += arr[i];
+//     }
+//     if (!Array.isArray(arr)) {
+//         return null;
+//     }
+//     return sumOfElems;
+// }
 
-// examples
-console.log(getSum([1, 10, -10, 4])); // ==> 5
-console.log(getSum([1])); // ==> 1
-console.log(getSum([-8, 8])); // ==> 0
-console.log(getSum(10, 12, 14)); // ==> null
+// // examples
+// console.log(getSum([1, 10, -10, 4])); // ==> 5
+// console.log(getSum([1])); // ==> 1
+// console.log(getSum([-8, 8])); // ==> 0
+// console.log(getSum(10, 12, 14)); // ==> null
+
+// Перебор массива
+const numbers = [11, 22, 33, 55, 66];
+
+for (let i = 0; i < numbers.length; i += 1) {
+  console.log(i);
+}

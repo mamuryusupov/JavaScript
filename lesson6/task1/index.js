@@ -103,15 +103,50 @@
 
 //Homework
 
-function getArrayBounds(arr) {
-    // put your code here
-    if (!Array.isArray(arr)) {
-        return null;
-    }
-    return [arr.length, arr[0], arr[arr.length - 1]];
-}
+// function getArrayBounds(arr) {
+//     // put your code here
+//     if (!Array.isArray(arr)) {
+//         return null;
+//     }
+//     return [arr.length, arr[0], arr[arr.length - 1]];
+// }
 
-// examples
-console.log(getArrayBounds([1, 10, 9, 11])); // ==> [4, 1, 11]
-console.log(getArrayBounds(10, 12, 14)); // ==> null
-console.log(getArrayBounds([1])); // ==> [1, 1, 1]
+// // examples
+// console.log(getArrayBounds([1, 10, 9, 11])); // ==> [4, 1, 11]
+// console.log(getArrayBounds(10, 12, 14)); // ==> null
+// console.log(getArrayBounds([1])); // ==> [1, 1, 1]
+
+// Массивы
+
+// const numbers = [1, 2, 4];
+
+// const arr = new Array(1, 2, 3);
+// const arr2 = new Array(4);
+
+// console.log(arr);
+// console.log(arr2);
+
+// Длина массива
+// const numbers = [1, 2, 4, 5, 9];
+// const numberOfElements = numbers.length;
+
+// console.log(numberOfElements);
+// Доступ к элементам
+
+// console.log('Elem 1: ' + numbers[1]);
+// console.log('Elem 2: ' + numbers[2]);
+// console.log('Last: ' + numbers[numbers.length - 1]);
+
+// [1, 2, 4, 5, 9] => [lenth, first elem, last elem]
+const numbers = [1, 2, 4, 5, 9];
+
+function getArrayBound(arr) {
+  if (Array.isArray(arr)) {
+    return null;
+  }
+  return [arr.length, arr[0], arr[arr.length - 1]];
+}
+const result = getArrayBound(numbers);
+console.log(result);
+
+// Метод массива
