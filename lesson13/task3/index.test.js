@@ -5,7 +5,7 @@ import { findMimSquareNum } from './index.js';
 
 it('should return null if argument is an empty array', () => {
   const result1 = findMimSquareNum([]);
-  expect(result1).toEqual(null);
+  expect(result1).toEqual(Infinity);
 });
 
 // test 2
