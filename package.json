@@ -6,7 +6,6 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "start": "babel-node index.js",
     "dev": "nodemon — exec babel-node index.js"
   },
   "keywords": [],
