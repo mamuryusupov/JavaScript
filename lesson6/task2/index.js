@@ -139,8 +139,28 @@
 // console.log(getSum(10, 12, 14)); // ==> null
 
 // Перебор массива
-const numbers = [11, 22, 33, 55, 66];
+// const numbers = [11, 22, 33, 55, 66];
+// let sumOfNumbers = 0;
+// for (let i = 0; i < numbers.length; i += 1) {
+//   sumOfNumbers += numbers[i];
+// console.log(numbers[i]);
+//   console.log([i]);
+//   console.log(i);
+// }
+// console.log(sumOfNumbers);
 
-for (let i = 0; i < numbers.length; i += 1) {
-  console.log(i);
-}
+// function sum(numbers) {
+//   let sumOfNumbers = 0;
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     sumOfNumbers += numbers[i];
+//   }
+//     return sumOfNumbers;
+// }
+
+// const sumOfElements = sum(numbers);
+// console.log('Result: ' + sumOfNumbers);
+
+// const numbers = [11, 22, 33, 55, 66];
+// const arr = numbers;
+// arr[2] = 1000;
+// console.log(numbers);

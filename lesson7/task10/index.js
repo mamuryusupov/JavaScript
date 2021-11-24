@@ -7,14 +7,12 @@
 //input: arr with seperate elems
 //output: number (sum of all elements)
 
-const sum = (arr) => {
-    if (!Array.isArray(arr)) {
-        return "not Array";
-    }
-    const sumOfElems = (accum, elem) => {
-        return accum + elem;
-    };
-    return arr.reduce(sumOfElems);
+const sum = arr => {
+  if (!Array.isArray(arr)) {
+    return 'not Array';
+  }
+  const sumOfElems = (accum, elem) => accum + elem;
+  return arr.reduce(sumOfElems);
 };
 
 const initialArray = [1, 2, 4, 5, 6, 9, 21];

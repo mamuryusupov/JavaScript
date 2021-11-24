@@ -81,24 +81,33 @@
 
 //       console.log (user);
 
-//Option 4
-function addPropertyV4(userData, userId) {
-    let copyObj = {...userData };
-    copyObj.id = userId;
-    return copyObj;
-}
+// //Option 4
+// function addPropertyV4(userData, userId) {
+//     let copyObj = {...userData };
+//     copyObj.id = userId;
+//     return copyObj;
+// }
 
-const user = {
-    name: "Sam",
-};
-console.log(user);
+// const user = {
+//     name: "Sam",
+// };
+// console.log(user);
 
-console.log(addPropertyV4(user, "1234567")); // ==> { name: 'Sam', id: '1234567' }
+// console.log(addPropertyV4(user, "1234567")); // ==> { name: 'Sam', id: '1234567' }
 
-console.log(user);
-
-// put your code here
-
-// put your code here
+// console.log(user);
 
 // examples
+
+// function getKeys(obj) {
+//   // put you code here
+
+//   return Object.keys(obj);
+// }
+
+// const user = {
+//   name: 'Sam',
+//   age: 18,
+//   hobby: 'football',
+// };
+// console.log(getKeys(user));

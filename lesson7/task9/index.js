@@ -22,23 +22,37 @@
 // 3. true: return balance(element) - amount and return  new balance
 //4. false: return -1
 
+// const withdraw = (clients, balances, client, amount) => {
+//     let clientNum = clients.indexOf(client);
+//     console.log(clientNum);
+
+//     const isEnough = (num) => {
+//         if (num > amount) {
+//             return num - amount;
+//         }
+//         return -1;
+//     };
+//     const newBalances = balances.map(isEnough);
+//     return newBalances[clientNum];
+// };
+// short version
+
 const withdraw = (clients, balances, client, amount) => {
-    let clientNum = clients.indexOf(client);
-    console.log(clientNum);
+  const clientNum = clients.indexOf(client);
 
-    const isEnough = (num) => {
-        if (num > amount) {
-            return num - amount;
-        }
-        return -1;
-    };
-    const newBalances = balances.map(isEnough);
-    return newBalances[clientNum];
+  const newBalances = balances.map(num => {
+    if (num > amount) {
+      return num - amount;
+    }
+    return -1;
+  });
+  return newBalances[clientNum];
 };
 
-console.log(withdraw(["Ann", "John", "User"], [1400, 87, -6], "John", 50));
-console.log(withdraw(["Ann", "John", "User"], [1400, 87, -6], "User", 10));
+const clientsList = ['Ann', 'John', 'User'];
+console.log(clientsList);
+const clinetsBalance = [1400, 87, -6];
+console.log(clinetsBalance);
 
-
--1 : (balances[ind] -= amount);
-};
+console.log(withdraw(['Ann', 'John', 'User'], [100, 0, -6], 'John', 50));
+console.log(withdraw(['Ann', 'John', 'User'], [1400, 87, -6], 'User', 10));

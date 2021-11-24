@@ -164,12 +164,30 @@
 // });
 // console.log(foundIndex);
 
-function getKeys(obj) {
-    // put you code here
-    Object.keys(obj).forEach((elem) => {
-        console.log(elem);
-    });
-}
+// function getKeys(obj) {
+//     // put you code here
+//     Object.keys(obj).forEach((elem) => {
+//         console.log(elem);
+//     });
+// }
 
-let initialObj = { "John Doe": 19, Tom: 17, Bob: 18 };
-console.log(getKeys(initialObj));
+// let initialObj = { "John Doe": 19, Tom: 17, Bob: 18 };
+// console.log(getKeys(initialObj));
+
+// methods
+
+const user = {
+  name: 'Tom',
+  age: 17,
+  sayHi: function () {
+    console.log('Hi');
+  },
+};
+
+console.log(user.sayHi());
+
+[1, 2].forEach;
+
+console.log('text'.toUpperCase());
+console.log((1.89).toFixed());
+console.log((1).toFixed());

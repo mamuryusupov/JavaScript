@@ -13,15 +13,24 @@
 //input:  number, number
 //output: number
 
-const arrAvarage = (arr) => {
-    if (!Array.isArray(arr)) {
-        return "not Array";
-    }
-    const sumOfElems = (accum, elem) => {
-        return accum + elem;
-    };
-    let averageNum = arr.reduce(sumOfElems) / arr.length;
-    return averageNum;
+// const arrAvarage = (arr) => {
+//     if (!Array.isArray(arr)) {
+//         return "not Array";
+//     }
+//     const sumOfElems = (accum, elem) => {
+//         return accum + elem;
+//     };
+//     let averageNum = arr.reduce(sumOfElems) / arr.length;
+//     return averageNum;
+// };
+
+const arrAvarage = arr => {
+  if (!Array.isArray(arr)) {
+    return 'not Array';
+  }
+  const sumOfElems = (accum, elem) => accum + elem;
+
+  return arr.reduce(sumOfElems) / arr.length;
 };
 
 console.log(arrAvarage([2, 5, 6, 3]));

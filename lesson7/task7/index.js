@@ -19,21 +19,35 @@
 
 //input: number
 //output: boolean
+// long form
+// function increaseEvenEl(arr, delta) {
+//     if (!Array.isArray(arr)) {
+//         return "null";
+//     }
+
+//     const ifNumEven = (num) => {
+//         if (num % 2 === 0) {
+//             return num + delta;
+//         } else {
+//             return num;
+//         }
+//     };
+
+//     return arr.map(ifNumEven);
+// }
+// short form
 
 function increaseEvenEl(arr, delta) {
-    if (!Array.isArray(arr)) {
-        return "null";
+  if (!Array.isArray(arr)) {
+    return 'null';
+  }
+
+  return arr.map(num => {
+    if (num % 2 === 0) {
+      return num + delta;
     }
-
-    const ifNumEven = (num) => {
-        if (num % 2 === 0) {
-            return num + delta;
-        } else {
-            return num;
-        }
-    };
-
-    return arr.map(ifNumEven);
+    return num;
+  });
 }
 
 const initialArray = [1, 2, 4, 5, 6, 9, 21];

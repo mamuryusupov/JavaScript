@@ -59,15 +59,35 @@
 
 // console.log(getSpecialNumbers([1, 2, 4, 5, 6, 9, 21]));
 
-const getSpecialNumbers = (arr) => {
-    const ifAliquote = (number) => {
-        if (number % 3 === 0) {
-            return number;
-        }
-        return false;
-    };
-    return arr.filter(ifAliquote);
-};
+// const getSpecialNumbers = (arr) => {
+//     const ifAliquote = (number) => {
+//         if (number % 3 === 0) {
+//             return number;
+//         }
+//         return false;
+//     };
+//     return arr.filter(ifAliquote);
+// };
 
-const initialArray = [1, 3, 9, 11, 12, 2];
-console.log(getSpecialNumbers(initialArray));
+// const initialArray = [1, 3, 9, 11, 12, 2];
+// console.log(getSpecialNumbers(initialArray));
+
+// Можно объявить снаружи
+//   function checkIfSpecialNumber(num) {
+//     if (num % 3 === 0) {
+//       specialNumbers.push(num);
+//     }
+//   }
+const getSpecialNumbers = numbers => numbers.filter(num => num % 3 === 0);
+//   const specialNumbers = [];
+
+//   const result = numbers.forEach(num => {
+//     if (num % 3 === 0) {
+//       specialNumbers.push(num);
+//     }
+//   });
+
+//   return result;
+
+const array = [1, 2, 30, 35, 45, 30];
+console.log(getSpecialNumbers(array));

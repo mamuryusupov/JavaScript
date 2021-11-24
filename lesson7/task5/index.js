@@ -10,9 +10,9 @@
 //2.1 step 1 true =
 //2.2 ittirate through array from 0 index to the last index
 //2.3 multiply each elem * elem
-//input: array(object)
+// input: array(object)
 //output:  modified array(object)
-//Step 3  return modified array(
+// Step 3  return modified array(
 
 // const arraySquaredElements = (arr) => {
 //     if (!Array.isArray(arr)) {
@@ -35,17 +35,28 @@
 // 2. Почему forEach возвращает  undefined?
 // 3. Можно ли вернуть forEach без push в новый массив?
 
-const arraySquaredElements = (arr) => {
-    if (!Array.isArray(arr)) {
-        return "not Array";
-    }
-    let squaredElem = (num) => {
-        return num * num;
-    };
+// const arraySquaredElements = (arr) => {
+//     if (!Array.isArray(arr)) {
+//         return "not Array";
+//     }
+//     let squaredElem = (num) => {
+//         return num * num;
+//     };
 
-    return arr.map(squaredElem);
+//     return arr.map(squaredElem);
+// };
+
+// const newArr = [1, 3, 7, 9, 13];
+
+// console.log(arraySquaredElements(newArr));
+
+const squareArray = array => {
+  const newArr = [];
+  const squared = array.forEach(number => {
+    newArr.push(number * number);
+  });
+  return newArr;
 };
 
 const newArr = [1, 3, 7, 9, 13];
-
-console.log(arraySquaredElements(newArr));
+console.log(squareArray(newArr));

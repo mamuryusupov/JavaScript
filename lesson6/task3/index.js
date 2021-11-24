@@ -153,7 +153,37 @@
 // getSpecialNumbers(-10, 10); // ==> [-9, -6, -3, 0, 3, 6, 9]
 // getSpecialNumbers(1, 2); // ==> [ ]
 
-const arr1 = [1, 2, 3, 4];
-const arr2 = [5, 6, 7, 8];
-let newArr = [arr1, arr2];
-console.log(newArr.flat());
+// const arr1 = [1, 2, 3, 4];
+// const arr2 = [5, 6, 7, 8];
+// let newArr = [arr1, arr2];
+// console.log(newArr.flat());
+
+// const people = ['Tom', 'Ann', 'Hardy'];
+
+// // people[10] = 'Jack';
+// people[people.length] = 'Jack';
+// // people.length = 10;
+// // people.length = 2;
+// people.unshift('Bill'); // доб в начало
+// people.push('Jack', 'Jeniffer'); // доб в конец
+// const last = people.pop(); // удал с конца и возвращает
+// const first = people.shift(); // удал с начала и возвращает
+
+// console.log(last);
+// console.log(people);
+// console.log(people.length);
+
+// from , to => [n % 3 === 0]
+
+function getSpecialNumbers(from, to) {
+  let specialNumbers = [];
+  for (let i = from; i <= to; i += 1) {
+    if (i % 3 === 0) {
+      specialNumbers.push(i);
+    }
+  }
+  return specialNumbers;
+}
+
+const specialNumbers = getSpecialNumbers(1, 20);
+console.log(specialNumbers);

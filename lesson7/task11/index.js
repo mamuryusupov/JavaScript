@@ -13,15 +13,22 @@
 //input:  array
 //output: modified array
 
-const filterNames = (arr, text) => {
-    const ifMatch = (word) => {
-        if (word.includes(text) && word.length >= 5) {
-            return true;
-        }
-        return false;
-    };
+// const filterNames = (arr, text) => {
+//     const ifMatch = (word) => {
+//         if (word.includes(text) && word.length >= 5) {
+//             return true;
+//         }
+//         return false;
+//     };
 
-    return arr.filter(ifMatch);
-};
+//     return arr.filter(ifMatch);
+// };
 
-console.log(filterNames(["Jonh", "Olivya", "Oleksandr", "Vanya"], "ya"));
+const filterNames = (arr, text) =>
+  arr.filter(word => {
+    if (word.includes(text) && word.length >= 5) {
+      return true;
+    }
+    return false;
+  });
+console.log(filterNames(['Jonh', 'Olivya', 'Oleksandr', 'Vanya'], 'ya'));

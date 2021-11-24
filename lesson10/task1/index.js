@@ -198,19 +198,19 @@
 // console.log(getParsedFloats(initialArr));
 // console.log(getParsedFloatsV2(initialArr));
 
-const multiRound = (num) => {
-    let mathOperations = [
-        Math.floor(num * 100) / 100,
-        Math.round(num * 100) / 100,
-        Math.ceil(num * 100) / 100,
-        Math.trunc(num * 100) / 100,
-        Number(num.toFixed(2)),
-    ];
-    return mathOperations;
-};
+// const multiRound = (num) => {
+//     let mathOperations = [
+//         Math.floor(num * 100) / 100,
+//         Math.round(num * 100) / 100,
+//         Math.ceil(num * 100) / 100,
+//         Math.trunc(num * 100) / 100,
+//         Number(num.toFixed(2)),
+//     ];
+//     return mathOperations;
+// };
 
-console.log(multiRound(-2));
-console.log(multiRound(2.14));
+// console.log(multiRound(-2));
+// console.log(multiRound(2.14));
 
 // const getMaxAbsoluteNumber = (arr) => {
 //     if (!Array.isArray(arr) || !arr.length) {
@@ -265,3 +265,36 @@ console.log(multiRound(2.14));
 // //examples
 // console.log(superRound(11.12556, 2)); // ==> [11.12, 11.12, 11.13, 11.13, 11.13]
 // console.log(superRound(6.11, 3)); // ==> [6.11, 6.11, 6.11, 6.11, 6.11]
+
+console.log(Number('34'));
+console.log(Number(null));
+console.log(Number(undefined));
+console.log(Number('I'));
+
+//
+
+console.log(Number.isNaN('text'));
+console.log(isNaN('text'));
+console.log(isNaN(NaN));
+console.log(Number.isNaN(NaN));
+
+console.log(Number.isFinite('17'));
+console.log(isFinite('17'));
+
+console.log(parseInt(' 17.17text'));
+console.log(Number.parseInt(' 17.17text'));
+console.log('seventeen');
+
+console.log(parseFloat(' 17.17text'));
+console.log(Number.parseFloat(' 17.17text'));
+console.log(Number.parseFloat('seventeen'));
+
+console.log(Number.isInteger(17));
+console.log(Number.isInteger(17.0));
+console.log(Number.isInteger(17.17));
+console.log(Number.isInteger(17.17));
+console.log(Number.isInteger('17'));
+console.log(Number.isInteger(Infinity));
+console.log(Number.isInteger(NaN));
+console.log(Number.isInteger(undefined));
+console.log(Number.isInteger(null));

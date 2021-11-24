@@ -28,7 +28,7 @@
 
 // console.log('text'.split(''));
 // console.log('text'.split());
-console.log("text texty texting".split(" ", 3));
+// console.log("text texty texting".split(" ", 3));
 // // console.log('text'.split('e'));
 
 // // // Поиск подстроки в строке
@@ -123,27 +123,59 @@ console.log("text texty texting".split(" ", 3));
 // 1. 'abcdefg', 4 => ['abcd', efg ] => ['Abcd', 'Efg']
 // 2. => 'Abcd/nEfg'
 
-const splitString = (string, len) => {
-    // if (typeof string !== "string") {
-    //     return null;
-    // }
-    // if (len === 0 || typeof len === "undefined") {
-    //     len = 10;
-    // }
+// const splitString = (string, len) => {
+// if (typeof string !== "string") {
+//     return null;
+// }
+// if (len === 0 || typeof len === "undefined") {
+//     len = 10;
+// }
 
-    let result = [];
-    let start = 0;
-    // for (let i = start; i < string.length; i += len) {
-    //     // let chunk = string.slice(i, (i += len));
+// let result = [];
+// let start = 0;
+// for (let i = start; i < string.length; i += len) {
+//     // let chunk = string.slice(i, (i += len));
 
-    //     let chunk = string.substr(i, len);
-    //     console.log(chunk);
-    //     result.push(chunk);
-    // }
+//     let chunk = string.substr(i, len);
+//     console.log(chunk);
+//     result.push(chunk);
+// }
 
-    return result;
+//     return result;
+// };
+
+// console.log(splitString("abcdefghijklmnope", 3));
+// console.log(splitString("abcdefghijklmnope", 0));
+// console.log(splitString("abcdefghijklmnope"));
+
+// const text = 'message';
+// const myMessage = `The text is ${text.toUpperCase()},\nAnd something else.
+// `;
+// console.log(myMessage);
+
+// console.log(text[0]);
+// console.log(text[text.length]);
+// console.log(text.charAt(text.length));
+
+// text[2] = 'Q';
+
+// console.log('text'.concat('asd'));
+// console.log('text'.split(''));
+
+const splitText = (text, len) => {
+  const strArr = [];
+  let startPosition = 0;
+  while (true) {
+    let chunk = text.substr(startPosition, len);
+    if (chunk.length === 0) {
+      break;
+    }
+    strArr.push(chunk[0].toUpperCase() + chunk.slice(1));
+    startPosition += len;
+  }
+  return strArr.join('\n');
 };
 
-console.log(splitString("abcdefghijklmnope", 3));
-console.log(splitString("abcdefghijklmnope", 0));
-console.log(splitString("abcdefghijklmnope"));
+// 1. 'abcdefg' => ['abcd', 'efg] => ['Abcd', 'Efg]
+// => 'Abcd/nEfg'
+console.log(splitText('abcdefg', 4));

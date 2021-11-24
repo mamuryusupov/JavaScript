@@ -161,20 +161,20 @@
 //Withdraw
 
 function withdraw(clients, balances, client, amount) {
-    for (let i = 0; i <= clients; i++) {
-        if (clients[i].includes(client)) {
-            return true;
-        }
-        return false;
+  for (let i = 0; i <= clients; i++) {
+    if (clients[i].includes(client)) {
+      return true;
     }
-    // for (let j = 0; j <= balances.length; j++) {
-    //     if (clients[i] === clients && amount < balances[j]) {
-    //         return (restSum = balances[j] - amount);
-    //     }
-    //     return -1;
-    // }
+    return false;
+  }
+  // for (let j = 0; j <= balances.length; j++) {
+  //     if (clients[i] === clients && amount < balances[j]) {
+  //         return (restSum = balances[j] - amount);
+  //     }
+  //     return -1;
+  // }
 }
-console.log(withdraw(["Ann", "John", "User"], "John"));
+// console.log(withdraw(["Ann", "John", "User"], "John"));
 // function withdraw(clients, client) {
 //     for (let i = 0; i <= clients.length; i++) {
 //         if ([i] == client) {
@@ -342,96 +342,110 @@ console.log(withdraw(["Ann", "John", "User"], "John"));
 
 // console.log(output);
 
-function withdraw(clients, balances, client, amount) {
-    let userAccount;
+// function withdraw(clients, balances, client, amount) {
+//     let userAccount;
 
-    for (let i = 0; i <= clients.length; i++) {
-        for (let j = 0; j <= balances.length; j++) {
-            userAccount = balances[clients.indexOf(client)];
-        }
-    }
-    if (userAccount > amount) {
-        userAccount -= amount;
-    } else {
-        return -1;
-    }
+//     for (let i = 0; i <= clients.length; i++) {
+//         for (let j = 0; j <= balances.length; j++) {
+//             userAccount = balances[clients.indexOf(client)];
+//         }
+//     }
+//     if (userAccount > amount) {
+//         userAccount -= amount;
+//     } else {
+//         return -1;
+//     }
 
-    return userAccount;
+//     return userAccount;
+// }
+// console.log(withdraw(["Ann", "John", "User"], [1400, 87, -6], "John", 50));
+
+// function removeDuplicates(array) {
+//     let newArr = [];
+//     for (let i = 0; i <= array.length; i++) {
+//         if (!array[i] == array[i]) {
+//             newArr.push(array[i]);
+//         }
+//     }
+//     return newArr;
+// }
+
+// console.log(removeDuplicates(["Ann", "John", "User", "Ann", "John"]));
+
+// function removeDuplicates(array) {
+//     let newArr = [];
+
+//     if (!Array.isArray(arr)) {
+//         return null;
+//     }
+//     for (let i = 0; i <= array.length; i++) {
+//         if (!newArr.includes(array[i])) {
+//             newArr.push(array[i]);
+//         }
+//     }
+//     return newArr;
+// }
+// console.log(removeDuplicates(["Ann", "John", "User", "Ann", "John"]));
+
+// function removeDuplicates(array) {
+//     let newArr = [];
+
+//     if (!Array.isArray(arr)) {
+//         return null;
+//     }
+//     for (let i = 0; i <= array.length; i++) {
+//         if (newArr[i] !== array[i]) {
+//             newArr.push(array[i]);
+//         }
+//     }
+//     return newArr;
+// }
+
+// console.log(removeDuplicates(["Ann", "John", "User", "Ann", "John"]));
+
+// function removeDuplicates(array) {
+//     let uniques = 0;
+
+//     if (!Array.isArray(arr)) {
+//         return null;
+//     }
+//     for (let i = 0; i <= array.length; i++) {
+//         if (array[i] !== array[i]) {
+//             uniques += 1;
+//         }
+//     }
+//     return newArr;
+// }
+// console.log(removeDuplicates(["Ann", "John", "User", "Ann", "John"]));
+
+// function sortAsc(array) {
+//     // let minElem = Math.min(...array);
+//     // let a = array[0];
+//     // let b = array[1];
+//     let newArr = [];
+
+//     for (let i = 0; i <= array.length; i++) {
+//         if (array[i] > array[i - 1]) {
+//             continue;
+//         }
+//         newArr.unshift(array[i]);
+//     }
+//     return newArr;
+// }
+// console.log(sortAsc([100, 0, 50, 20, 30]));
+
+// let array = [100, 0, 50];
+
+// in: number
+// out: arr
+// num => arr (of num)
+// 1. creat empty arr
+// 2. apply the num to create the length
+
+function createEmptyArray(len) {
+  let newArray = [];
+  newArray.length = len;
+  return newArray;
 }
-console.log(withdraw(["Ann", "John", "User"], [1400, 87, -6], "John", 50));
 
-function removeDuplicates(array) {
-    let newArr = [];
-    for (let i = 0; i <= array.length; i++) {
-        if (!array[i] == array[i]) {
-            newArr.push(array[i]);
-        }
-    }
-    return newArr;
-}
-
-console.log(removeDuplicates(["Ann", "John", "User", "Ann", "John"]));
-
-function removeDuplicates(array) {
-    let newArr = [];
-
-    if (!Array.isArray(arr)) {
-        return null;
-    }
-    for (let i = 0; i <= array.length; i++) {
-        if (!newArr.includes(array[i])) {
-            newArr.push(array[i]);
-        }
-    }
-    return newArr;
-}
-console.log(removeDuplicates(["Ann", "John", "User", "Ann", "John"]));
-
-function removeDuplicates(array) {
-    let newArr = [];
-
-    if (!Array.isArray(arr)) {
-        return null;
-    }
-    for (let i = 0; i <= array.length; i++) {
-        if (newArr[i] !== array[i]) {
-            newArr.push(array[i]);
-        }
-    }
-    return newArr;
-}
-
-console.log(removeDuplicates(["Ann", "John", "User", "Ann", "John"]));
-
-function removeDuplicates(array) {
-    let uniques = 0;
-
-    if (!Array.isArray(arr)) {
-        return null;
-    }
-    for (let i = 0; i <= array.length; i++) {
-        if (array[i] !== array[i]) {
-            uniques += 1;
-        }
-    }
-    return newArr;
-}
-console.log(removeDuplicates(["Ann", "John", "User", "Ann", "John"]));
-
-function sortAsc(array) {
-    // let minElem = Math.min(...array);
-    // let a = array[0];
-    // let b = array[1];
-    let newArr = [];
-
-    for (let i = 0; i <= array.length; i++) {
-        if (array[i] > array[i - 1]) {
-            continue;
-        }
-        newArr.unshift(array[i]);
-    }
-    return newArr;
-}
-console.log(sortAsc([100, 0, 50, 20, 30]));
-
-let array = [100, 0, 50];
+console.log(createEmptyArray(10));

@@ -72,7 +72,7 @@
 
 //Restart
 
-const numbers = [11, 22, 33, 55, 66];
+//const numbers = [11, 22, 33, 55, 66];
 
 //Option 1
 // const a = numbers[0];
@@ -97,25 +97,52 @@ const numbers = [11, 22, 33, 55, 66];
 
 ///Homework
 
-function swap(numbers) {
-    // put your code here
-    const [a, ...arr] = numbers;
-    return [...arr, a];
+// function swap(numbers) {
+//   // put your code here
+//   const [a, ...arr] = numbers;
+//   return [...arr, a];
+// }
+
+// /**
+//  * @param {number[]} numbers
+//  * @return {number[]}
+//  */
+// function swapManual(numbers) {
+//     // put your code here
+
+//     let newArr = numbers.slice();
+//     let firstElement = newArr.shift(0);
+//     newArr.push(firstElement);
+//     return newArr;
+// }
+
+// // examples
+// // console.log(swap([1, 10, 9, 11])); // ==> [10, 9, 11, 1]
+// console.log(swapManual([1, 10, 9, 11])); // ==> [10, 9, 11, 1]
+
+const numbers = [11, 22, 33, 55, 66];
+// присволими значения из массива в переменные
+// const a = numbers[0];
+// const b = numbers[1];
+// const f = numbers[6];
+
+// то же самое можно сделать с диструктуризацией
+// const [a, b, c, d, e, f] = numbers;
+
+// console.log(a, b);
+// console.log(a, b, c, d, e, f);
+
+// другой вариант спред оператор, получаем все остальные элементы
+const [a, b, ...arr] = numbers;
+
+console.log(a, b);
+console.log(a, b, arr);
+console.log(a, b, [1, 2, 3, arr]);
+// плоский
+console.log(a, b, [1, 2, 3, ...arr]);
+
+function swap(arr) {
+  const [start, ...rest] = arr;
+  return [...rest, start];
 }
-
-/**
- * @param {number[]} numbers
- * @return {number[]}
- */
-function swapManual(numbers) {
-    // put your code here
-
-    let newArr = numbers.slice();
-    let firstElement = newArr.shift(0);
-    newArr.push(firstElement);
-    return newArr;
-}
-
-// examples
-// console.log(swap([1, 10, 9, 11])); // ==> [10, 9, 11, 1]
-console.log(swapManual([1, 10, 9, 11])); // ==> [10, 9, 11, 1]
+console.log(swap(numbers));

@@ -31,25 +31,20 @@
 //         return "$" + String(Math.floor(element * 100) / 100);
 //     });
 
-const cleanTransactionList = (array) =>
-    array
-    .map((element) => {
-        const mathEl = Number(element);
-        const toFixedNum = mathEl.toFixed(2);
-        const trimmed = toFixedNum.trim();
-        return "$" + trimmed;
+const cleanTransactionList = array =>
+  array
+    .map(element => {
+      const mathEl = Number(element);
+      const toFixedNum = mathEl.toFixed(2);
+      const trimmed = toFixedNum.trim();
+      return '$' + trimmed;
     })
-    .filter((element) => {
-        const containLetter = /\d/gi;
-        return element.match(containLetter);
+    .filter(element => {
+      const containLetter = /\d/gi;
+      return element.match(containLetter);
     });
 
-const initialTransaction = [
-    "  1.93434343434  ",
-    "16.4232323",
-    17,
-    " 1 dollar ",
-];
+const initialTransaction = ['  1.93434343434  ', '16.4232323', 17, ' 1 dollar '];
 console.log(initialTransaction);
 console.log(cleanTransactionList(initialTransaction));
 console.log(initialTransaction);

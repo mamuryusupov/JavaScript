@@ -2,54 +2,83 @@
 
 //Привидение в плоски массив
 //Option 1
-const flatArray = (arr) => {
-        const flatArray = arr.reduce((acc, elem) => {
-            return acc.concat(elem);
-        }, []);
-        const flatArray = (arr) => {
-            const flatArray = arr.reduce((acc, elem) => {
-                return acc.concat(elem);
-            }, []);
+// const flatArray = (arr) => {
+//         const flatArray = arr.reduce((acc, elem) => {
+//             return acc.concat(elem);
+//         }, []);
+//         const flatArray = (arr) => {
+//             const flatArray = arr.reduce((acc, elem) => {
+//                 return acc.concat(elem);
+//             }, []);
 
-            const compare = (a, b) => {
-                if (a < b) {
-                    return -1;
-                }
-                if (a > b) {
-                    return 1;
-                }
-                return 0;
-            };
+//             const compare = (a, b) => {
+//                 if (a < b) {
+//                     return -1;
+//                 }
+//                 if (a > b) {
+//                     return 1;
+//                 }
+//                 return 0;
+//             };
 
-            return flatArray.slice().sort(compare);
-        };
-        const initArray = [1, [2, 3, 4], 5, [6]];
+//             return flatArray.slice().sort(compare);
+//         };
+//         const initArray = [1, [2, 3, 4], 5, [6]];
 
-        console.log(flatArray(initArray));
+//         console.log(flatArray(initArray));
 
-        //Привидение в плоски массив
-        //Option 2
+//Привидение в плоски массив
+//Option 2
 
-        // const flatArray = (arr) => arr.flat();
+// const flatArray = (arr) => arr.flat();
 
-        // const initArray = [1, [2, 3, 4], 5, [6]];
+// const initArray = [1, [2, 3, 4], 5, [6]];
 
-        // console.log(flatArray(initArray));
+// console.log(flatArray(initArray));
 
-        //Конкат массива, не мутирует, создает новый массив
+//Конкат массива, не мутирует, создает новый массив
 
-        //[1, 2].concat([3, 4], 3, [10]); //создается новый и возвращается плоский массив [1, 2, 3, 4, 3, 10]
-        //[1, 2].concat(3); //[1, 2, 3]
-        //[1, 2].concat(3, [2, 5]); //[1, 2, 3, 2, 5]
+//[1, 2].concat([3, 4], 3, [10]); //создается новый и возвращается плоский массив [1, 2, 3, 4, 3, 10]
+//[1, 2].concat(3); //[1, 2, 3]
+//[1, 2].concat(3, [2, 5]); //[1, 2, 3, 2, 5]
 
-        //Функция reduce, суммирует элементы массива
-        //[2, 3, 4] => 10;
+//Функция reduce, суммирует элементы массива
+//[2, 3, 4] => 10;
 
-        // [2, 3, 4].reduce(function(accumulator, num) {
-        //     return accumulator + num;
-        // }, 0);
+// [2, 3, 4].reduce(function(accumulator, num) {
+//     return accumulator + num;
+// }, 0);
 
-        //1 : 0, 1 => 1
-        //2 : 1, 2 => 3
-        //3 : 3, 3 => 6
-        //4 : 6, 4 => 10
+//1 : 0, 1 => 1
+//2 : 1, 2 => 3
+//3 : 3, 3 => 6
+//4 : 6, 4 => 10
+
+// [1, [1, 2, 3, 4], 5, [6]] => [1, 1, 2, 3, 4, 5, 6]
+
+// const flatArray = arr => {
+//   const flatArray = arr.reduce((acc, elem) => {
+//     return acc.concat(elem);
+//   }, []);
+//   return flatArray;
+// };
+// const initArray = [1, [2, 3, 4], 5, [6]];
+// console.log(flatArray(initArray))
+
+const flatArray = arr => {
+  const flatArr = arr.flat();
+  return flatArr;
+};
+const initArray = [1, [2, 3, 4], 5, [6]];
+console.log(flatArray(initArray));
+
+// console.log([1, 2].concat(3));
+
+//  [1, 2, 3, 4] => 10;
+
+// console.log([1, 2, 3, 4].reduce((accum, num) => accum + num, 0) );
+
+// 1; 0, 1 => 1
+// 2; 1, 2 => 3
+// 3; 3, 3 => 6
+// 4; 6, 4 => 10
