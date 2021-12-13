@@ -7,6 +7,6 @@ export const getDescription = function () {
 export const getPlans = function () {
   return document.querySelector('.plans').innerHTML;
 };
-export const getGoals = function () {
+export const getGoal = function () {
   return document.querySelector('.goal').outerHTML;
 };
