@@ -5,7 +5,7 @@
 //   return butSet;
 // };
 
-setButton('Hello');
+export setButton('Hello');
 const setButton = function (buttonText) {
   const butSet = (document.querySelector('body').innerHTML = '<button>buttonText</button>');
   return butSet;
