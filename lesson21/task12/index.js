@@ -1,8 +1,9 @@
 export { squaredNumbers };
 const squaredNumbers = () => {
-  const element = document.querySelector('.number');
-  const squared = Math.pow(element.dataset.number, 2);
-  element.dataset.squaredNumber = squared;
+  const elements = document.querySelectorAll('.number');
+  elements.forEach(elem => {
+    elem.dataset.squaredNumber = elem.dataset.number ** 2;
+  });
 };
 
 squaredNumbers();
