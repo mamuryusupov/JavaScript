@@ -1,7 +1,7 @@
 export { manageClasses };
 
 const manageClasses = () => {
-  const firstElem = document.querySelector('.class');
+  const firstElem = document.querySelector('.one');
   firstElem.classList.add('selected');
 
   const secondElem = document.querySelector('.two');
