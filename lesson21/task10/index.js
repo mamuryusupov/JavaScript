@@ -1,5 +1,5 @@
 export const finishForm = function () {
-  const newAttribute = document.querySelector('input');
+  const newAttribute = document.createElement('input');
   newAttribute.setAttribute('name', 'login');
-  newAttribute.setAttribute('password');
+  newAttribute.setAttribute('type', 'password');
 };
