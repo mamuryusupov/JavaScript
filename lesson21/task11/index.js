@@ -1,17 +1,13 @@
 export { manageClasses };
-
 const manageClasses = () => {
-  const firstElem = document.querySelector('.one');
-  firstElem.classList.add('selected');
-
-  const secondElem = document.querySelector('.two');
-  secondElem.classList.remove('selected');
-
-  const thirdElem = document.querySelector('.three');
-  thirdElem.classList.toggle('three_done');
-
-  const fourthElem = document.querySelector('.four');
-  if (fourthElem.classList.contains('some-class')) {
-    liElem.classList.add('another-class');
+  const liElements1 = document.querySelector('.one');
+  liElements1.classList.add('selected');
+  const liElements2 = document.querySelector('.two');
+  liElements2.classList.remove('selected');
+  const liElements3 = document.querySelector('.three');
+  liElements3.classList.toggle('three_done');
+  const liElements4 = document.querySelector('.four');
+  if (liElements4.classList.contains('some-class')) {
+    liElements4.classList.add('another-class');
   }
 };
